@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family:monospace; */
+    padding: 1rem;
+    display: flex;
+}
+.logo{
+    font-size: 26px;
+}
+.eat{
+    color: rgb(5, 152, 5);
+    text-transform: capitalize;
+}
+header{
+    margin-right: 3%;
+    flex-basis: 1;
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.navigation{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.cart{
+    padding-bottom: 1rem;
+}
+.fa{
+    margin-top: 1em;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.profile > img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.small-container{
+    display: flex;
+    justify-content: space-between;
+}
+.search-bar{
+    flex-grow: 1;
+}
+
+.huge-container{
+    display: flex;
+    flex-grow: 1;
+    column-gap: 1.5em;
+}
+.big-container{
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+}
+.side-bar{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    
+}
+.special-offer{
+    background-color: rgb(131, 217, 151);
+    /* height: 30%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0.3em 0.3em 0 0;
+}
+.special-offer p{
+    font-weight: bold;
+}
+.special-offer > img{
+    width: 7rem;
+}
+.side-bar button{
+    width: 80%;
+}
+.special-offer > button{
+    margin-bottom: 1em;
+}
+.checkbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    background-color: rgb(185, 239, 190);
+    border-radius: 0 0 0.3em 0.3em;
+    color: rgb(20, 70, 20);
+
+}
+.search-bar > input{
+    width: 70%;
+    border-radius: 1em;
+    padding: 0.5em;
+    border: solid 1px gray;
+}
+.section2{
+    background-color: rgb(190, 240, 190);
+    padding: 1em;
+    border-radius: 0.3em;
+}
+.kcal{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-top: 1em;
+}
+.item{
+    width: 6em;
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 0.8em 0.5em;
+}
+.item > p{
+    color: grey;
+}
+.section3{
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 1em 0;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+button{
+    width: 6em;
+    padding: 0.5em 0;
+    border-style: none;
+    background-color: rgb(83, 184, 103);
+    color: rgb(20, 70, 20);
+    border-radius: 0.5rem;
+}
+.section4{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 4em 1em;
+}
+.dishes{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 0.5em;
+    
+}
+.card{
+    background-color: rgb(210, 234, 215);
+    border-radius: 1em;
+    display: grid;
+    justify-items: center;
+}
+.card > p{
+    align-self: flex-end;
+    padding-bottom: 0.5em;
+    color: rgb(20, 70, 20);
+}
+
+
+
+@media (max-width:1024px){
+    .section4{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+    }
+}
+@media (max-width:601px){
+   
+    body{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    header, .navigation, .profile{
+        flex-direction: row;
+    }
+    .navigation{
+        flex-grow: 1;
+    }
+
+    header{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .section4{
+      display: grid;
+      grid-template-columns: auto;
+
+    }
+    .huge-container{
+        
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+    .side-bar{
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0.5em;
+    }
+    .special-offer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,auto);
+        justify-items: center;
+        row-gap: 1em;
+        border-radius: 0.5em;
+    }
+    .special-offer > button{
+        width: 100%;
+        margin-bottom: 0.8em;
+    }
+    .checkbox{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: repeat(4,auto);
+        gap: 1em;
+        border-radius: 0.5em;
+    }
+    .big-container{
+        margin-bottom: 1rem;
+    }
+    .add-to-cart{
+        grid-row: 4/5;
+        grid-column:1/4; 
+        width: 100%;
+    }
+    
+    
+}
